@@ -8,7 +8,7 @@ print_message() {
 # Actualizar e instalar paquetes
 print_message "Descargando paquetes necesarios"
 sudo apt update -y
-sudo apt install -y screen python2
+sudo apt install -y screen python2 sudo wget
 # Descargar archivo Python
 print_message "Descargando archivo python"
 sudo mkdir -p /etc/SSH-ws
