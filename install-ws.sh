@@ -7,7 +7,7 @@ print_message() {
 }
 # Actualizar e instalar paquetes
 print_message "Descargando paquetes necesarios"
-sudo apt update
+sudo apt update -y
 sudo apt install -y screen python2
 # Descargar archivo Python
 print_message "Descargando archivo python"
@@ -19,6 +19,10 @@ sudo chmod +x /etc/SSH-ws/websocket973.py
 clear
 # Iniciar el servicio en una sesión de screen
 print_message "Iniciando servicio en screen"
+#User Creado
+print_message "Usuario: Hola"
+print_message "Contraseña: Mundo
+useradd -e 2025 12 31 /bin/false Test && echo "Hola:Mundo" | chpasswd
 screen -dmS ws_tunnel python2 /etc/SSH-ws/websocket973.py 80
 # Mensaje final
 print_message "Instalación completada :)"
