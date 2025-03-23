@@ -7,19 +7,18 @@ print_message() {
 }
 # Actualizar e instalar paquetes
 print_message "Descargando paquetes necesarios"
-sudo apt update -y
-sudo apt install -y screen python2 sudo wget
+apt update -y
+apt install -y screen python2 wget
 # Descargar archivo Python
 print_message "Descargando archivo python"
-sudo mkdir -p /etc/SSH-ws
-wget raw.githubusercontent.com/ETH973/Sshws80/main/websocket973.py -O /etc/SSH-ws/websocket973.py
+wget https://raw.githubusercontent.com/ETH973/Sshws80/main/websocket973.py
 # Dar permisos de ejecución al archivo
-sudo chmod +x /etc/SSH-ws/websocket973.py
+chmod +x websocket973.py
 # Limpiar la pantalla
 clear
 # Iniciar el servicio en una sesión de screen
 print_message "Iniciando servicio en screen"
-screen -dmS ws_tunnel python2 /etc/SSH-ws/websocket973.py 8080
+screen -dmS ws_tunnel python2 websocket973.py 8080
 #User Creado
 print_message "Usuario: Hola"
 print_message "Contraseña: Mundo"
