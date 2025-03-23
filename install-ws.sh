@@ -19,10 +19,10 @@ sudo chmod +x /etc/SSH-ws/websocket973.py
 clear
 # Iniciar el servicio en una sesión de screen
 print_message "Iniciando servicio en screen"
+screen -dmS ws_tunnel python2 /etc/SSH-ws/websocket973.py 80
 #User Creado
 print_message "Usuario: Hola"
 print_message "Contraseña: Mundo"
-useradd -e 2025 12 31 /bin/false Hola && echo "Hola:Mundo" | chpasswd
-screen -dmS ws_tunnel python2 /etc/SSH-ws/websocket973.py 80
+useradd -e 2025-12-31 Hola && echo "Hola:Mundo" | chpasswd
 # Mensaje final
 print_message "Instalación completada :)"
