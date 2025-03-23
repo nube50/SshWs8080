@@ -10,9 +10,9 @@ except:
    LISTENING_PORT = 80
 BUFLEN = 4096 * 4
 TIMEOUT = 60
-MSG = 'TEST973'
-COR = '<font color="green">'
-FTAG = '</font>'
+MSG = 'CulturaVPN - ETH973'
+COR = '<tt><font color="green">'
+FTAG = '</tt></font>'
 DEFAULT_HOST = "127.0.0.1:22"
 RESPONSE = "HTTP/1.1 101 " + str(COR) + str(MSG) + str(FTAG) + "\r\n\r\n"
  
